@@ -24,6 +24,9 @@ vim.keymap.set("n", "<C-j>", "<C-d>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-k>", "<C-u>zz", { noremap = true, silent = true })
 vim.keymap.set("n", "<tab>", "<C-^>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "*", ":term python3 %<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "-", ":bd <CR>", { noremap = true, silent = true })
+
 vim.keymap.set("i", "<C-l>", 'copilot#Accept("\\<CR>")', {
   expr = true,
   replace_keycodes = false,
